@@ -1,92 +1,118 @@
 .toolbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #0d47a1;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #0d47a1;
+  color: white;
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 12px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .new-button {
+    background-color: #a3aac6;
     color: white;
-  
-    span {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-left: 12px;
+
+    &:hover {
+      background-color: #7890c1;
     }
-  
-    .spacer {
-      flex: 1 1 auto;
-    }
-  
-    button {
-      color: white;
-  
-      mat-icon {
-        margin-right: 4px;
-      }
-    }
-  
-    // Custom style for the New button
-    .new-button {
-      background-color: #a3aac6; 
-      color: white;
-  
-      &:hover {
-        background-color: #7890c1;
-      }
-  
-      mat-icon {
-        margin-right: 4px;
-      }
+
+    mat-icon {
+      margin-right: 4px;
     }
   }
-  
-  .table-container {
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    background: white;
-    overflow-x: auto;
-    margin: 48px auto;
-    padding: 32px;
-    max-width: 1100px;
-    width: 95%;
+
+  /* White home icon */
+  button[mat-icon-button] mat-icon {
+    color: white;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 12px;
-  
-    th {
-      font-weight: 600;
-      background: #f3f4f6;
-      text-align: left;
-      padding: 12px;
-      font-size: 14px;
-    }
-  
-    td {
-      background: #ffffff;
-      border-radius: 6px;
-      padding: 14px 12px;
-      vertical-align: middle;
-      font-size: 14px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-  
-    tr {
-      transition: box-shadow 0.3s ease;
-  
-      &:hover {
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-      }
-    }
-  
-    mat-chip {
-      font-size: 13px;
-      font-weight: 500;
-      height: 28px;
-    }
-  
-    button {
-      margin: 0 4px;
+}
+
+.table-container {
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  background: white;
+  overflow-x: auto;
+  margin: 48px auto;
+  padding: 32px;
+  max-width: 1100px;
+  width: 95%;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+
+  th {
+    font-weight: 600;
+    background: #f3f4f6;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  td {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 14px 12px;
+    vertical-align: middle;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  tr {
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     }
   }
-  
+
+  mat-chip {
+    font-size: 13px;
+    font-weight: 500;
+    height: 28px;
+    color: white;
+
+    &.status-delivered {
+      background-color: #8bcb8d;
+    }
+
+    &.status-out {
+      background-color: #a9c4ff;
+    }
+
+    &.status-ready {
+      background-color: #a8a8a8;
+    }
+  }
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    min-width: 110px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    mat-icon {
+      font-size: 18px;
+    }
+  }
+}

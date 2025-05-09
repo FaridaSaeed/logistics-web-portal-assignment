@@ -32,10 +32,20 @@ export class ShipmentListComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  chipColor(status: string) {
-    return status === 'Delivered' ? 'primary'
-      : status === 'Out for Delivery' ? 'accent'
-      : '';
+  /**
+   * Map each status to a CSS class for coloring
+   */
+  statusClass(status: string): string {
+    switch (status) {
+      case 'Delivered':
+        return 'status-delivered';
+      case 'Out for Delivery':
+        return 'status-out';
+      case 'Ready to Pick Up':
+        return 'status-ready';
+      default:
+        return '';
+    }
   }
 
   onCheckout(s: Shipment) {
