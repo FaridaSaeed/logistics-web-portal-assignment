@@ -1,0 +1,60 @@
+.toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0d47a1;
+  
+    .toolbar-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.5px; // ✅ Slightly improves text appearance
+    }
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 120px 16px 80px;
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 64px);
+  }
+  
+  .action-card {
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding-bottom: 24px;
+    border-radius: 16px;
+    background: #ffffff; // ✅ Ensures contrast with background
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); // ✅ Subtle base shadow
+  
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); // ✅ A bit more elevation
+    }
+  
+    .card-icon {
+      font-size: 34px;
+      color: #1976d2;
+      margin-right: 12px;
+    }
+  
+    mat-card-title {
+      font-size: 21px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      line-height: 1.4;
+    }
+  
+    mat-card-content {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #555;
+    }
+  }
+  

@@ -1,0 +1,53 @@
+.toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0d47a1;
+    color: white;
+  
+    span {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-left: 12px;
+    }
+  
+    button {
+      color: white;
+    }
+  }
+  
+  .form-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px 32px;
+    margin: 64px auto;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .btn-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  
+    button {
+      min-width: 120px;
+      font-weight: 500;
+    }
+  }
+  

@@ -1,0 +1,45 @@
+<mat-toolbar color="primary" class="mat-elevation-z4 toolbar">
+    <button mat-icon-button routerLink="/"><mat-icon>arrow_back</mat-icon></button>
+    <span>New Shipment</span>
+  </mat-toolbar>
+  
+  <mat-card class="form-card mat-elevation-z2">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-grid">
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Tracking ID</mat-label>
+        <input matInput formControlName="trackingId" />
+        <mat-error *ngIf="form.get('trackingId')?.hasError('required')">
+          Tracking ID is required
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input
+          matInput
+          formControlName="phoneNumber"
+          placeholder="e.g., 01012345678 or +201012345678"
+        />
+        <mat-error *ngIf="form.get('phoneNumber')?.hasError('required')">
+          Phone number is required
+        </mat-error>
+        <mat-error *ngIf="form.get('phoneNumber')?.hasError('pattern')">
+          Must be 11 digits starting with 0 or in +20 format
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description (optional)</mat-label>
+        <textarea matInput formControlName="description" rows="3"></textarea>
+      </mat-form-field>
+  
+      <div class="btn-row full-width">
+        <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">
+          Create
+        </button>
+      </div>
+  
+    </form>
+  </mat-card>
+  
